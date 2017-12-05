@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import QtCore, QtGui, uic
-from PyQt5.QtWidgets import QApplication, QDialog, QFileDialog,QTableWidget,QTableWidgetItem
+from PyQt5.QtWidgets import QApplication, QDialog, QFileDialog,QTableWidget,QTableWidgetItem, QHeaderView
 
 import xml.etree.ElementTree as ET
 
@@ -34,22 +34,15 @@ class MyApp(QDialog, Ui_MainWindow):
         return
 
     def initTable(self):
-        #self.tableWidget = QTableWidget()
+
         self.tableWidget.setRowCount(1)
         self.tableWidget.setColumnCount(2)
 
-        #self.TableWidget.setRowCount(16)
-        '''
-        self.tableWidget.setItem(0, 0, QTableWidgetItem("Cell (1,1)"))
-        self.tableWidget.setItem(0, 1, QTableWidgetItem("Cell (1,2)"))
-        self.tableWidget.setItem(1, 0, QTableWidgetItem("Cell (2,1)"))
-        self.tableWidget.setItem(1, 1, QTableWidgetItem("Cell (2,2)"))
-        self.tableWidget.setItem(2, 0, QTableWidgetItem("Cell (3,1)"))
-        self.tableWidget.setItem(2, 1, QTableWidgetItem("Cell (3,2)"))
-        self.tableWidget.setItem(3, 0, QTableWidgetItem("Cell (4,1)"))
-        self.tableWidget.setItem(3, 1, QTableWidgetItem("Cell (4,2)"))
-        self.tableWidget.move(0, 0)
-        '''
+        hheader = self.tableWidget.horizontalHeader()
+
+        hheader.setSectionResizeMode(0, QHeaderView.ResizeToContents)
+        hheader.setSectionResizeMode(1, QHeaderView.Stretch)
+
         self.tableWidget.verticalHeader().setDefaultSectionSize(22)
         self.tableWidget.setHorizontalHeaderLabels(['Type', 'Name'])
 
