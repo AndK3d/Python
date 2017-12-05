@@ -99,3 +99,11 @@ ENV/
 
 # mypy
 .mypy_cache/
+renderHost_masterV3_insgraf.conf
+CIGITaskConfig.xml
+DBDefaultConfig.xml
+.idea/entity_editor.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
