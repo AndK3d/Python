@@ -1,6 +1,9 @@
 import sys
 from PyQt5 import QtCore, QtGui, uic
-from PyQt5.QtWidgets import QApplication, QDialog, QFileDialog,QTableWidget,QTableWidgetItem, QHeaderView
+from PyQt5.QtWidgets import QApplication, QDialog, QFileDialog,QTableWidget,QTableWidgetItem, QHeaderView,QTreeWidgetItem,QTreeWidget
+
+from PyQt5.QtCore import QAbstractItemModel, QFile, QIODevice, QModelIndex, Qt
+from PyQt5.QtQuick import QQuickView
 
 import xml.etree.ElementTree as ET
 
@@ -10,7 +13,7 @@ qtCreatorFile = "entity.ui"  # Enter file here.
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
 
-class MyApp(QDialog, Ui_MainWindow):
+class MyApp(QDialog, Ui_MainWindow,QTreeWidget):
     def __init__(self):
         QDialog.__init__(self)
         Ui_MainWindow.__init__(self)
@@ -30,6 +33,15 @@ class MyApp(QDialog, Ui_MainWindow):
 
             self.fill_table(data)
 
+            print("point")
+
+            for row in data:
+                QTreeWidgetItem().setText(0, row)
+
+                
+
+
+            #MyApp.Tree.populate(data)
 
         return
 
@@ -62,6 +74,18 @@ class MyApp(QDialog, Ui_MainWindow):
             self.tableWidget.setItem(i, 1, QTableWidgetItem(row.attrib['Name']))
             i = i + 1
         return
+
+    def populate(self, data):
+        # populate the tree with QTreeWidgetItem items
+        for row in data:
+            # is attached to the root (parent) widget
+            rowItem = QTreeWidgetItem()
+            rowItem.setText(0, row)
+            for subRow in row:
+                # is attached to the current row (rowItem) widget
+                subRowItem = QTreeWidgetItem(rowItem)
+                subRowItem.setText(0, subRow)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
