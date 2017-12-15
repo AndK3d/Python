@@ -20,4 +20,17 @@ def get_xml_entity_list(file):
     for entity in xml:
         get_child(entity)
 
-get_xml_entity_list(CIGITaskConfig)
+def add_row(values=[]):
+
+    #item = [QStandardItem(text),QStandardItem(text),QStandardItem(text)]
+
+    items_list = []
+    for text in values:
+        item = QStandardItem(text)
+        items_list.append(item)
+
+    print (items_list)
+    return
+
+#get_xml_entity_list(CIGITaskConfig)
+add_row([1,2,3])
