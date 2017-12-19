@@ -37,9 +37,9 @@ class MyApp(QDialog, Ui_MainWindow):
         self.treeview.setColumnWidth(0, 150)
         self.treeview.setAlternatingRowColors(True)
 
-        for en in data:
-            #print (en)
-            self.get_child(en)
+        for entity in data:
+            print ('fill_tree_view: entity = ',entity)
+            self.get_child(entity)
 
         value = ["my_item1", "my_item2", "my_item3"]
 
@@ -115,25 +115,21 @@ class MyApp(QDialog, Ui_MainWindow):
 
         return entity_tree
 
-    def get_child(self, parent):
+    def get_child(self, value, parent = None ):
 
-        #print(parent.tag, parent.attrib)
+        if not parent:
+            root = self.model.findItems('CIGITaskConfig.xml')
+            parent = root[0]
+            print ('true',' Parent=',parent)
+        else:
+            print ('false',' Parent=',parent)
 
-        #self.prnt = self.model.findItems(parent)
-        #self.itemCIGI = QStandardItem(parent.attrib)
-        #self.add_row(self.itemCIGI)
+        for key in value.attrib:
 
+            self.add_row(parent,[key,value.attrib[key]])
+        for i in range(0, len(value)):
+            self.get_child(value[i],parent)
 
-
-        for key in parent.attrib:
-            print(key, ' = ', parent.attrib[key])
-
-            self.parent_item = self.model.findItems('CIGITaskConfig.xml')
-            #print (self.parent_item)
-            self.add_row(self.parent_item[0],[key,parent.attrib[key]])
-
-        for i in range(0, len(parent)):
-            self.get_child(parent[i])
 
 
 
