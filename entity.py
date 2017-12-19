@@ -75,7 +75,7 @@ class MyApp(QDialog, Ui_MainWindow):
 
         parent.appendRow(items_list)
 
-        return
+        return item
 
     def set_item(self,row,column,text='set_item_Default'):
         item = QStandardItem(text)
@@ -115,6 +115,7 @@ class MyApp(QDialog, Ui_MainWindow):
 
         return entity_tree
 
+
     def get_child(self, value, parent = None ):
 
         if not parent:
@@ -124,12 +125,25 @@ class MyApp(QDialog, Ui_MainWindow):
         else:
             print ('false',' Parent=',parent)
 
+        p_item = self.add_row(parent, [value.tag])
+
+        #loop in XML child nodes
+        for child in value:
+            print ('-child =', child)
+            p_item = self.add_row(p_item, [child.tag])
+            #loop in XML parameters
+            for key in child.attrib:
+                print('  *key =', key)
+                self.add_row(p_item, [key, child.attrib[key]])
+
+
+        '''
         for key in value.attrib:
 
             self.add_row(parent,[key,value.attrib[key]])
         for i in range(0, len(value)):
             self.get_child(value[i],parent)
-
+        '''
 
 
 
