@@ -74,7 +74,7 @@ class MyApp(QDialog, Ui_MainWindow):
             self.model.setColumnCount(len(items_list))
 
         parent.appendRow(items_list)
-
+        self.treeview.expandAll()
         return item
 
     def set_item(self,row,column,text='set_item_Default'):
@@ -116,7 +116,7 @@ class MyApp(QDialog, Ui_MainWindow):
         return entity_tree
 
 
-    def get_child(self, value, parent = None ):
+    def get_child_backup(self, value, parent = None ):
 
         if not parent:
             root = self.model.findItems('CIGITaskConfig.xml')
@@ -137,6 +137,7 @@ class MyApp(QDialog, Ui_MainWindow):
                 self.add_row(p_item, [key, child.attrib[key]])
 
 
+
         '''
         for key in value.attrib:
 
@@ -145,7 +146,27 @@ class MyApp(QDialog, Ui_MainWindow):
             self.get_child(value[i],parent)
         '''
 
+    def get_child(self, value, parent = None ):
 
+        if not parent:
+            root = self.model.findItems('CIGITaskConfig.xml')
+            parent = root[0]
+            print ('true',' Parent=',parent)
+        else:
+            print ('false',' Parent=',parent)
+
+        # add TAG of XML node
+        p_item = self.add_row(parent, [value.tag])
+         # add parameters of node
+        for key in value.attrib:
+            print('  *key =', [key, value.attrib[key]])
+            c_item = self.add_row(p_item, [key, value.attrib[key]])
+
+        for child in value:
+            print('_______________', child.tag)
+            self.get_child(child,c_item)
+
+        return
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
