@@ -159,12 +159,13 @@ class MyApp(QDialog, Ui_MainWindow):
         p_item = self.add_row(parent, [value.tag])
          # add parameters of node
         for key in value.attrib:
-            print('  *key =', [key, value.attrib[key]])
-            c_item = self.add_row(p_item, [key, value.attrib[key]])
+            #print('  *key =', [key, value.attrib[key]])
+            self.add_row(p_item, [key, value.attrib[key]])
 
+        #loop by child elements
         for child in value:
-            print('_______________', child.tag)
-            self.get_child(child,c_item)
+            #print('_______________', child.tag)
+            self.get_child(child,p_item)
 
         return
 
