@@ -1,0 +1,308 @@
+Entity
+    Type	0
+    Name	NULLTYPE
+Entity
+    Type	102
+    Name	Camera
+Entity
+    Type	201
+    Name	Mi-171
+    Plugin
+        DllName	IGHostExtrapolatorPlugin
+        PluginName	TSIGHOSTEXTRAPOLATORPLUGIN
+        Name	Extrapolator plugin
+Entity
+    Type	202
+    Name	Angar
+    Plugin
+        DllName	IgHostAutonomObjectPlugin
+        Type	Car
+        PluginName	TSIGHOSTAUTONOMOBJECTPLUGIN
+        Name	Car
+Entity
+    Type	203
+    Name	Angar crashed
+Entity
+    Type	204
+    Name	Boeing
+Entity
+    Type	205
+    Name	Mi-8 Simple
+    Plugin
+        DllName	IGHostExtrapolatorPlugin
+        PluginName	TSIGHOSTEXTRAPOLATORPLUGIN
+        Name	Extrapolator plugin
+Entity
+    Type	206
+    Name	Measure
+Entity
+    Type	500
+    Name	Abrams
+Entity
+    Type	501
+    Name	Abrams crashed
+Entity
+    Type	502
+    Name	Ural
+Entity
+    Type	503
+    Name	Ural crashed
+Entity
+    Type	504
+    Name	Kamaz
+Entity
+    Type	505
+    Name	Kamaz crashed
+Entity
+    Type	510
+    Name	Building
+Entity
+    Type	511
+    Name	Building crashed
+Entity
+    Type	512
+    Name	Building01
+Entity
+    Type	513
+    Name	Building01 crashed
+Entity
+    Type	514
+    Name	Block
+Entity
+    Type	515
+    Name	Block crashed
+Entity
+    Type	516
+    Name	Warehouse
+Entity
+    Type	517
+    Name	Warehouse crashed
+Entity
+    Type	518
+    Name	Target02
+Entity
+    Type	519
+    Name	Target02 crashed
+Entity
+    Type	550
+    Name	Mi8 static
+Entity
+    Type	551
+    Name	Mi8 static crashed
+Entity
+    Type	600
+    Name	Abrams
+    Plugin
+        DllName	IgHostAutonomObjectPlugin
+        Type	Car
+        PluginName	TSIGHOSTAUTONOMOBJECTPLUGIN
+        Name	Car
+Entity
+    Type	602
+    Name	Ural
+    Plugin
+        DllName	IgHostAutonomObjectPlugin
+        Type	Car
+        PluginName	TSIGHOSTAUTONOMOBJECTPLUGIN
+        Name	Car
+Entity
+    Type	604
+    Name	Kamaz
+    Plugin
+        DllName	IgHostAutonomObjectPlugin
+        Type	Car
+        PluginName	TSIGHOSTAUTONOMOBJECTPLUGIN
+        Name	Car
+Entity
+    Type	1001
+    Name	C5
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	S5
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	Rocket S-5
+Entity
+    Type	1002
+    Name	C8
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	S8
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	Rocket S-8
+Entity
+    Type	1003
+    Name	ASO
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	ASO
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	Rocket ASO
+Entity
+    Type	1301
+    Name	FAB-50
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	AB50
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	FAB 50
+Entity
+    Type	1401
+    Name	FAB-50
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	AB50
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	FAB 50
+Entity
+    Type	1305
+    Name	FAB-100
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	AB100
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	FAB 100
+Entity
+    Type	1405
+    Name	FAB-100
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	AB100
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	FAB 100
+Entity
+    Type	1307
+    Name	FAB-250
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	AB250
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	FAB 250
+Entity
+    Type	1407
+    Name	FAB-250
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	AB250
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	FAB 250
+Entity
+    Type	1304
+    Name	FAB-500
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	AB500
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	FAB 100
+Entity
+    Type	1404
+    Name	FAB-500
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	AB500
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	FAB 100
+Entity
+    Type	1304
+    Name	ZAB-500
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	AB500
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	ZAB 500
+Entity
+    Type	1308
+    Name	Block UB-32
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	UB32
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	Block UB-32
+Entity
+    Type	1303
+    Name	UPK
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	UPK
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	FAB 100
+Entity
+    Type	1302
+    Name	Block B8V20-A
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	B8V20
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	FAB 100
+Entity
+    Type	1100
+    Name	Bullet Red
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	snar
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	Bullet red
+Entity
+    Type	1101
+    Name	Bullet Yellow
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	snar
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	Bullet yellow
+Entity
+    Type	1102
+    Name	Bullet Green
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	snar
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	Bullet green
+Entity
+    Type	1103
+    Name	Bullet White
+    Plugin
+        DllName	IgHostExternDevPlugin
+        Type	snar
+        PluginName	TSIGHOSTEXTERNDEVPLUGIN
+        Name	Bullet white
+Entity
+    Type	2001
+    Name	Voronka
+Entity
+    Type	2002
+    Name	Explosion 1
+Entity
+    Type	2003
+    Name	Explosion 2
+Entity
+    Type	2004
+    Name	Explosion 3
+Entity
+    Type	2005
+    Name	Explosion 4
+Entity
+    Type	2006
+    Name	Explosion 5
+Entity
+    Type	2007
+    Name	Explosion 6
+Entity
+    Type	2500
+    Name	Explosion Abrams
+Entity
+    Type	2502
+    Name	Explosion Ural
+Entity
+    Type	2504
+    Name	Explosion Kamaz
+Entity
+    Type	2550
+    Name	Explosion Mi8 static
+Entity
+    Type	4000
+    Name	Cloud control
+    Plugin
+        DllName	IgHostCloudObject
+        Type	snar
+        PluginName	IGHOSTCLOUDOBJECT
+        Name	Bullet white
